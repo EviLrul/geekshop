@@ -58,9 +58,10 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
+                        <div>{% static '{{products.0.pic}}'%}</div> ------------------------
                         <a href="#">
                             <img class="card-img-top"
-                                 src="{% static 'vendor/img/products/Adidas-hoodie.png'%}"
+                                 src="{% static '{{products.0.pic}}'}"
                                  alt="">
                         </a>
                         <div class="card-body">

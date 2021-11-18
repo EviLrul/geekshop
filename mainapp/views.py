@@ -14,7 +14,7 @@ def products(request):
     context = {
         'title': 'geekshop - Товары',
         'products': [
-            {'name': 'Худи черного цвета с монограммами adidas Originals', 'price': 6090},
+            {'name': 'Худи черного цвета с монограммами adidas Originals', 'price': 6090, 'pic': 'vendor/img/products/Adidas-hoodie.png'},
             {'name': 'Синяя куртка The North Face', 'price': 23725},
             {'name': 'Коричневый спортивный oversized-топ ASOS DESIGN', 'price': 3390},
             {'name': 'Черный рюкзак Nike Heritage', 'price': 2340},
