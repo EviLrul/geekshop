@@ -56,20 +56,19 @@
 
             <div class="row">
 
-                <div class="col-lg-4 col-md-6 mb-4">
+                <!--<div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <div>{% static '{{products.0.pic}}'%}</div> ------------------------
                         <a href="#">
                             <img class="card-img-top"
-                                 src="{% static '{{products.0.pic}}'}"
+                                 src="{% static products.0.pic %}"
                                  alt="">
                         </a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">Худи черного цвета с монограммами adidas Originals</a>
+                                <a href="#">{{ products.0.name }}</a>
                             </h4>
-                            <h5>6 090,00 руб.</h5>
-                            <p class="card-text">Мягкая ткань для свитшотов. Стиль и комфорт – это образ жизни.</p>
+                            <h5>{{ products.0.price }} руб.</h5>
+                            <p class="card-text">{{ products.0.about }}</p>
                         </div>
                         <div class="card-footer text-center">
                             <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
@@ -176,7 +175,30 @@
                             <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
                         </div>
                     </div>
+                </div> -->
+
+                {%for product in products%}
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#">
+                            <img class="card-img-top"
+                                 src="{% static product.pic %}"
+                                 alt="">
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">{{ product.name }}</a>
+                            </h4>
+                            <h5>{{ product.price }} руб.</h5>
+                            <p class="card-text">{{ product.about }}</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
+                        </div>
+                    </div>
                 </div>
+                {%endfor%}
+
 
             </div>
 
