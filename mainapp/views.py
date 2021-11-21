@@ -23,16 +23,3 @@ def products(request):
         ]
     }
     return render(request, 'mainapp/products.html', context)
-
-
-def test(request):
-    cont = {
-        'title': 'GeekShop',
-        'header': 'Всем привет!',
-        'user': 'Serg',
-        'products': [
-            {'name': 'Худи черного цвета с монограммами adidas Originals', 'price': 6090},
-            {'name': 'Худи черного цвета с монограммами adidas Originals', 'price': 5600},
-        ]
-    }
-    return render(request, 'test_page.html', cont)
