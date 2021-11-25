@@ -1,4 +1,6 @@
 import json
+
+from django.contrib.auth.models import User
 from django.core.management.base import BaseCommand
 from mainapp.models import ProductCategory, Product
 
@@ -30,3 +32,5 @@ class Command(BaseCommand):
             prod['category'] = _category
             new_category = Product(**prod)
             new_category.save()
+
+            #super_user = User.objects.create_superuser('django', 'django@geekshop.local', 'geekbrains')
