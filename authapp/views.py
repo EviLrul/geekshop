@@ -55,7 +55,7 @@ def profile(request):
         if form.is_valid():
             form.save()
         else:
-            print(form.errors)   #!!!!!!!!!!!!!!!!!!! 1:27  2:32
+            print(form.errors)
     context = {
         'title': 'geekshop | Профайл',
         'form': UserProfileForm(instance=request.user),
